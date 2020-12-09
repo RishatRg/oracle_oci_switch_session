@@ -21,4 +21,10 @@ target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE
 
 target_link_libraries(${PROJECT_NAME} oci)
 
-install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE})
+install(TARGETS ${PROJECT_NAME}
+        CONFIGURATIONS Debug
+        RUNTIME DESTINATION ${CMAKE_SOURCE_DIR}/bin/Debug)
+
+install(TARGETS ${PROJECT_NAME}
+        CONFIGURATIONS Release
+        RUNTIME DESTINATION ${CMAKE_SOURCE_DIR}/bin/Release)
