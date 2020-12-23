@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-project(oci_test_switch_session VERSION 0.1.0)
+project(oci_test_switch_session LANGUAGES C)
 
 set(SOURCE_EXE switching.c oci_common.c)
 
